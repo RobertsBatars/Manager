@@ -1,8 +1,10 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private List<TargetAnchor> targetAnchors;
     void Start()
     {
         
@@ -11,6 +13,14 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < targetAnchors.Count; i++)
+        {
+            if (!targetAnchors[i].isCorrect)
+            {
+                return;
+            }
+        }
+        GetComponent<SpriteRenderer>().color = Color.green;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }

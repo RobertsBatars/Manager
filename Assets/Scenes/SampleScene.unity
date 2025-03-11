@@ -644,6 +644,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3197703723391157828, guid: 4a6f89fc4138b524faf878863966e08e, type: 3}
   m_PrefabInstance: {fileID: 6112025237826921620}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1104635243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6136876620280310825, guid: 4a6f89fc4138b524faf878863966e08e, type: 3}
+  m_PrefabInstance: {fileID: 6112025237826921620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac3a29eb204716b47a57aadb82587e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1232611340
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectorPrefab: {fileID: 1957973510489324960, guid: 513c39cab4aac924189568bc8abc28fc, type: 3}
   answerAnchor: {fileID: 0}
+  grabbed: 0
+  target: {fileID: 0}
 --- !u!1001 &1754632057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1123,6 +1136,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8382499179293045426, guid: 65e62208d33dea44e8a62713371be4ea, type: 3}
+      propertyPath: targetAnchors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8382499179293045426, guid: 65e62208d33dea44e8a62713371be4ea, type: 3}
+      propertyPath: 'targetAnchors.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1104635243}
     - target: {fileID: 9046297827368347903, guid: 65e62208d33dea44e8a62713371be4ea, type: 3}
       propertyPath: m_Name
       value: Door
@@ -1184,6 +1205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6136876620280310825, guid: 4a6f89fc4138b524faf878863966e08e, type: 3}
+      propertyPath: correctAnswerID
+      value: Fuck
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1240,6 +1265,10 @@ PrefabInstance:
     - target: {fileID: 6323782709690546422, guid: 44a2fefe836c7754998d3313edfc69ab, type: 3}
       propertyPath: m_Name
       value: AnswerAnchor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813194725779438754, guid: 44a2fefe836c7754998d3313edfc69ab, type: 3}
+      propertyPath: answerID
+      value: Fuck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
