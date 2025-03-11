@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AnswerConnector : MonoBehaviour
 {
@@ -34,10 +35,23 @@ public class AnswerConnector : MonoBehaviour
                 }
                 else
                 {
+                    if (target.connector != null)
+                    {
+                        Destroy(target.connector);
+                    }
+                    target.isCorrect = target.correctAnswerID == answerAnchor.answerID;
+                    target.connector = connector;
                     line.SetPosition(1, target.transform.position);
+                    line.SetPosition(0, answerAnchor.transform.position);
                     connector = null;
                     answerAnchor = null;
                 }
+            }
+            else if (target != null && answerAnchor == null && target.connector != null)
+            {
+                Destroy(target.connector);
+                target.connector = null;
+                target.isCorrect = false;
             }
         }
 
