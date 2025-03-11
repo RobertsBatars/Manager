@@ -21,7 +21,7 @@ public class AnswerAnchor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            spriteRenderer.color = Color.red;
+            spriteRenderer.color = Color.yellow;
             AnswerConnector player = collision.gameObject.GetComponent<AnswerConnector>();
             player.answerAnchor = this;
         }
